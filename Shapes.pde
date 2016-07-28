@@ -31,7 +31,7 @@ void draw() {
   y += dy * easing;
   
   fill(255);
-  rect(x, y, 66, 66); //easing rectangle
+  ellipse(x,y,66,66);  //easing ball
   
   fill(random(255),random(255),random(255));
   ellipse(mx,100,66,66); // a random color ball is moving at the bottom
@@ -42,13 +42,13 @@ void draw() {
   
   if (mousePressed == true){
     fill(252,255,82);
-    ellipse(x,y,size,size); //a yellow circle will appear when you press your mouse
+    rect(x, y, size,size); //a yellow rectangle will appear when you press your mouse
     noStroke(); //no stroke for the circle
     cursor(HAND);//when you press mouse, cursor icon will change to hand sign
     size ++;
     if(size>=480){
        size=100;
-    }//when the size of the yellow circle as same as the height, the size of circle will set as 100
+    }//when the size of the yellow rectangle as same as the height, the size of circle will set as 100
   } 
 
   if (drawS == true) { 
